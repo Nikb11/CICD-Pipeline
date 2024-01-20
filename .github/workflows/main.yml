@@ -1,7 +1,7 @@
 name: Deploying to EC2
 on:
     push:
-       branches:
+        branches:
            -main
 
 
