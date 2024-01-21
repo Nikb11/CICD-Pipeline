@@ -10,14 +10,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checking out code on runner
-              uses: actions/checkout@v4  #plugin version
+              uses: actions/checkout@v4
 
             - name: Login and update EC2 instance
               uses: appleboy/ssh-action@v1.0.3
               with:
-                      host: ${{ secrets.EC2_HOST }}
-                      username: ${{ secrets.EC2_USERNAME }}
-                      password: ${{ secrets.EC2_SSH_KEY }}
+                      host: ${{ secrets.EC2_HOST}}
+                      username: ${{ secrets.EC2_USERNAME}}
+                      password: ${{ secrets.EC2_SSH_KEY}}
                       port: 22
                       script: |
                              pwd
